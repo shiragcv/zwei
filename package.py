@@ -3,13 +3,13 @@
 import utils
 
 
-metadata = utils.get_metadata('setup.cfg')
+__metadata = utils.get_metadata('setup.cfg')
 
-name = metadata.get('name')
+name = __metadata.get('name')
 
-version = metadata.get('version')
+version = __metadata.get('version')
 
-description = metadata.get('version') or ''
+description = __metadata.get('version') or ''
 
 build_command = 'pip install --target={install_path} {root}'
 
